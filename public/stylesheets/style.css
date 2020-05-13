@@ -1,0 +1,17 @@
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  padding:0;
+  margin:0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #000;
+}
+.signup-container{
+  height: 100vh;
+  background-color:#000;
+}

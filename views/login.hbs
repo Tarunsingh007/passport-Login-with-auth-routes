@@ -1,0 +1,39 @@
+<div class="container-fluid p-0 m-0">
+<div class="row p-0 m-0 d-flex justify-content-center align-items-center signup-container">
+    <form action="/api/login" method="POST">
+    <fieldset>
+        <center><legend class="h1 p-4 mb-4">Login</legend class="h1"></center>
+        {{#if success_msg}}
+            {{#each success_msg}}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{this}}
+                </div>
+            {{/each}}
+        {{/if}}
+        {{#if error_msg}}
+            {{#each error_msg}}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{this}}
+                </div>
+            {{/each}}
+        {{/if}}
+
+        <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button class="btn btn-danger">Login</button>
+    </form>
+</div>
+</div>

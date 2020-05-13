@@ -1,0 +1,32 @@
+<div class="container-fluid p-0 m-0">
+  <div class="row p-0 m-0 d-flex justify-content-center align-items-center signup-container">
+    <form action="/api/signup" method="POST">
+      <fieldset>
+        <center><legend class="h1 p-4 mb-4">Signup</legend class="h1"></center>
+        {{#if errors}}
+          {{#each errors}}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              {{this}}
+            </div>
+          {{/each}}
+        {{/if}}
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" name="pw" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label>Repeat Password</label>
+          <input type="password" name="pw2" class="form-control" placeholder="Repeat Password">
+        </div>
+        <button class="btn btn-danger">SignUp</button>
+    </form>
+  </div>
+</div>
